@@ -13,7 +13,7 @@ function Accordion() {
 function AccordionTittle() {
     console.log("AccordionTittle rendered")
     return (
-        <h3>Меню</h3>
+        <h3>Меню:</h3>
     );
 }
 

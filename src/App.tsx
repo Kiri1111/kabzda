@@ -17,7 +17,7 @@ function App() {
 
 function AppTittle() {
     return (
-        <>This is APP component</>
+        <>This is A P P component</>
     );
 }
 
