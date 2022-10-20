@@ -7,12 +7,11 @@ function App() {
     console.log("App rendered")
     return (
         <div>
-            <PageTittle title={'This is A P P component'}/>
-            <PageTittle title={"My friends"}/>
-            <Rating value={3}/>
-            <Accordion titleValue={'Menu'}/>
-            <Accordion titleValue={'Users'}/>
-            <Rating value={1}/>
+
+            <Accordion titleValue={'Menu'} collapsed={true}/>
+            <Accordion titleValue={'Users'} collapsed={false}/>
+
+            <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
@@ -26,9 +25,9 @@ type PageTittle = {
     title: string
 }
 
-function PageTittle(props:PageTittle) {
+function PageTittle(props: PageTittle) {
     return (
-        <h1>{ props.title }</h1>
+        <h1>{props.title}</h1>
     );
 }
 
