@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './counter.module.css'
 
 type PropsType = {
     callBack: () => void
@@ -11,7 +12,8 @@ const Button = (props: PropsType) => {
     }
     return (
         <div>
-            {<button disabled={props.disable} onClick={onclickHandler}>{props.name}</button>}
+            {<button className={s.buttons} disabled={props.disable} onClick={onclickHandler}><b>{props.name}</b>
+            </button>}
         </div>
     );
 };

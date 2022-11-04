@@ -1,6 +1,8 @@
 .counter {
-
-    border: 2px solid #6DE5FA;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    border: 3px solid #6DE5FA;
     background-color: #292C34;
     border-radius: 7px;
     width: 250px;
@@ -8,8 +10,10 @@
 
 }
 
-.num1 {
 
+.num1 {
+    font-weight: bold;
+    text-align: center;
     margin-left: 10px;
     margin-top: 10px;
     width: 230px;
@@ -17,11 +21,11 @@
     color: #292C34;
     background-color: #6DE5FA;
     border-radius: 7px;
-    font-size: 45px;
+    font-size: 55px;
 }
 
 .num2 {
-
+    font-weight: bold;
     margin-left: 10px;
     margin-top: 10px;
     width: 230px;
@@ -29,40 +33,40 @@
     color: red;
     background-color: #6DE5FA;
     border-radius: 7px;
-    font-size: 45px;
+    font-size: 55px;
 }
 
-.buttons {
+.buttonsArea {
 
-    border: 2px solid #6DE5FA;
+    border: 3px solid #6DE5FA;
     background-color: #292C34;
     border-radius: 7px;
-    width: 228px;
+    width: 224px;
     height: 70px;
     margin-top: 10px;
     margin-left: 10px;
+
 }
 
-.butInc {
-    margin-left: 20px;
-    margin-top: 20px;
-    /*width: 230px;*/
-    /*height: 100px;*/
-    color: #292C34;
-    background-color: #6DE5FA;
+.buttons {
+    border: 2px solid #6DE5FA;
     border-radius: 7px;
+
+    background-color: #6DE5FA;
     display: inline-block;
-    /*font-size: px;*/
+    font-size: 23px;
 }
 
-.butReset {
-    margin-left: 20px;
-    /*margin-top: 20px;*/
-    /*width: 150px;*/
-    /*height: 100px;*/
-    color: #292C34;
-    background-color: #6DE5FA;
-    border-radius: 7px;
-    display: inline-block;
-    /*font-size: px;*/
+.inc {
+    width: px;
+    position: fixed;
+    top: 192px;
+    left: 130px
+}
+
+.reset {
+
+    position: fixed;
+    top: 192px;
+    left: 230px
 }

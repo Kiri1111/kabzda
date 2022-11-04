@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './counter.module.css'
 import Button from "./Button";
-import button from "./Button";
+
 
 const Counter = () => {
 
@@ -17,19 +17,22 @@ const Counter = () => {
     return (
         <div className={s.counter}>
             <div className={a === 5 ? s.num2 : s.num1}>{a}</div>
-            <div className={s.buttons}>
-                <div className={s.butInc}>
+            <div className={s.buttonsArea}>
+
+                <div className={s.inc}>
+
                     <Button callBack={onclickHandlerInc}
                             name={'inc'}
                             disable={a === 5}
                     />
                 </div>
-                <div className={s.butReset}>
+                <div className={s.reset}>
                     <Button callBack={onclickHandlerReset}
                             name={'reset'}
                             disable={a === 0}
                     />
                 </div>
+
             </div>
         </div>
     );
