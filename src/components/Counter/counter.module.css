@@ -1,0 +1,68 @@
+.counter {
+
+    border: 2px solid #6DE5FA;
+    background-color: #292C34;
+    border-radius: 7px;
+    width: 250px;
+    height: 205px;
+
+}
+
+.num1 {
+
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 230px;
+    height: 100px;
+    color: #292C34;
+    background-color: #6DE5FA;
+    border-radius: 7px;
+    font-size: 45px;
+}
+
+.num2 {
+
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 230px;
+    height: 100px;
+    color: red;
+    background-color: #6DE5FA;
+    border-radius: 7px;
+    font-size: 45px;
+}
+
+.buttons {
+
+    border: 2px solid #6DE5FA;
+    background-color: #292C34;
+    border-radius: 7px;
+    width: 228px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.butInc {
+    margin-left: 20px;
+    margin-top: 20px;
+    /*width: 230px;*/
+    /*height: 100px;*/
+    color: #292C34;
+    background-color: #6DE5FA;
+    border-radius: 7px;
+    display: inline-block;
+    /*font-size: px;*/
+}
+
+.butReset {
+    margin-left: 20px;
+    /*margin-top: 20px;*/
+    /*width: 150px;*/
+    /*height: 100px;*/
+    color: #292C34;
+    background-color: #6DE5FA;
+    border-radius: 7px;
+    display: inline-block;
+    /*font-size: px;*/
+}

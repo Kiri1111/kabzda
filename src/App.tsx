@@ -6,6 +6,7 @@ import {OnOff} from "./OnOff/OnOff";
 import UnControlledAccordion from "./components/UnControlledAccordion/UnControlledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting";
 import {UncontrolledOnOff} from './UnControledOnOff/UncontrolledOnOff';
+import Counter from "./components/Counter/counter";
 
 function App() {
     console.log("App rendered")
@@ -16,25 +17,25 @@ function App() {
 
     return (
         <div className={'App'}>
-
-            <Accordion titleValue={'Menu'}
-                       collapsed={accordionCollapsed}
-                       onChange={() => {
-                           setAccordionCollapsed(!accordionCollapsed)
-                       }}/>
+            <Counter/>
+            {/*<Accordion titleValue={'Menu'}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           onChange={() => {*/}
+            {/*               setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*           }}/>*/}
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
-            <UnControlledAccordion titleValue={'Menu'}/>
+            {/*<UnControlledAccordion titleValue={'Menu'}/>*/}
             {/*<UnControlledAccordion titleValue={'Users'}/>*/}
-            <UncontrolledRating/>
+            {/*<UncontrolledRating/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
             {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
-            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            {/*<UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}*/}
             {/*<UncontrolledOnOff/>*/}
 
         </div>
