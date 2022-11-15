@@ -1,18 +1,33 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './counter.module.css'
 import Button from "./Button";
 
 
-const Counter = () => {
+function Counter() {
 
-    let [a, setA] = useState<number>(0)
+    const [a, setA] = useState<number>(0)
+
+
+    // useEffect(() => {
+    //     localStorage.setItem('number', JSON.stringify(a))
+    // }, [a])
+
     const onclickHandlerInc = () => {
         setA(a + 1)
-
+        localStorage.setItem('number', JSON.stringify(a + 1))
     }
     const onclickHandlerReset = () => {
         setA(0)
     }
+
+
+    useEffect(() => {
+        let key = localStorage.getItem('number')
+        if (key) {
+            let newA = JSON.parse(key)
+            setA(newA)
+        }
+    }, [])
 
     return (
         <div className={s.counter}>
@@ -32,7 +47,6 @@ const Counter = () => {
                             disable={a === 0}
                     />
                 </div>
-
             </div>
         </div>
     );

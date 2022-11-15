@@ -49,12 +49,12 @@
 }
 
 .buttons {
+    
     border: 2px solid #6DE5FA;
     border-radius: 7px;
-
     background-color: #6DE5FA;
-    display: inline-block;
     font-size: 23px;
+    font-weight: bold;
 }
 
 .inc {

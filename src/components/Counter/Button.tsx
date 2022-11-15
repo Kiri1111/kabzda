@@ -12,8 +12,7 @@ const Button = (props: PropsType) => {
     }
     return (
         <div>
-            {<button className={s.buttons} disabled={props.disable} onClick={onclickHandler}><b>{props.name}</b>
-            </button>}
+            {<button className={s.buttons} disabled={props.disable} onClick={onclickHandler}>{props.name}</button>}
         </div>
     );
 };
