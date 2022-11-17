@@ -7,6 +7,8 @@ import UnControlledAccordion from "./components/UnControlledAccordion/UnControll
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting";
 import {UncontrolledOnOff} from './UnControledOnOff/UncontrolledOnOff';
 import Counter from "./components/Counter/counter";
+import Input from "./input/input";
+import ControledInput from "./input/controledInput";
 
 function App() {
     console.log("App rendered")
@@ -17,20 +19,22 @@ function App() {
 
     return (
         <div className={'App'}>
-            <Counter/>
-            {/*<Accordion titleValue={'Menu'}*/}
-            {/*           collapsed={accordionCollapsed}*/}
-            {/*           onChange={() => {*/}
-            {/*               setAccordionCollapsed(!accordionCollapsed)*/}
-            {/*           }}/>*/}
+
+
+            {/*<Input/>*/}
+            {/*<ControledInput/>*/}
+            {/*<Counter/>*/}
+            <Accordion titleValue={'Menu'}
+                       arr={['Kir9', 'Dima', 'Kost9n', 'Banan']}
+                       collapsed={accordionCollapsed}
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}/>
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
             {/*<UnControlledAccordion titleValue={'Menu'}/>*/}
-            {/*<UnControlledAccordion titleValue={'Users'}/>*/}
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={0}/>*/}
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value={2}/>*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
