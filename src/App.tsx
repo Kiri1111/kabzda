@@ -23,13 +23,13 @@ function App() {
 
             {/*<Input/>*/}
             {/*<ControledInput/>*/}
-            {/*<Counter/>*/}
-            <Accordion titleValue={'Menu'}
-                       arr={['Kir9', 'Dima', 'Kost9n', 'Banan']}
-                       collapsed={accordionCollapsed}
-                       onChange={() => {
-                           setAccordionCollapsed(!accordionCollapsed)
-                       }}/>
+            <Counter/>
+            {/*<Accordion titleValue={'Menu'}*/}
+            {/*           arr={['Kir9', 'Dima', 'Kost9n', 'Banan']}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           onChange={() => {*/}
+            {/*               setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*           }}/>*/}
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
             {/*<UnControlledAccordion titleValue={'Menu'}/>*/}

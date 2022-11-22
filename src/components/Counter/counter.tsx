@@ -1,55 +1,70 @@
 import React, {useEffect, useState} from 'react';
 import s from './counter.module.css'
 import Button from "./Button";
+import Input from "./Input";
 
 
 function Counter() {
 
     const [a, setA] = useState<number>(0)
-
-
-    // useEffect(() => {
-    //     localStorage.setItem('number', JSON.stringify(a))
-    // }, [a])
+    const [max, setMax] = useState<number>(0)
+    const [min, setStart] = useState<number>(0)
+    const [error, setError] = useState<boolean>(false)
 
     const onclickHandlerInc = () => {
-        setA(a + 1)
+        // if (a <= max) {
+        setA(a => a + 1);
         localStorage.setItem('number', JSON.stringify(a + 1))
+        //  }
     }
     const onclickHandlerReset = () => {
-        setA(0)
+        setA(min)
     }
 
+    const setSettingCounter = () => {
+
+        setA(min);
+    }
 
     useEffect(() => {
         let key = localStorage.getItem('number')
         if (key) {
-            let newA = JSON.parse(key)
-            setA(newA)
+            let localA = JSON.parse(key)
+            setA(localA)
         }
     }, [])
 
+
     return (
-        <div className={s.counter}>
-            <div className={a === 5 ? s.num2 : s.num1}>{a}</div>
-            <div className={s.buttonsArea}>
+        <div className={s.all}>
+            <div className={s.counter}>
+                <div className={a === max ? s.num2 : s.num1}>{error ? 'Incorrect value!' : a}</div>
+                <div className={s.buttonsArea}>
 
-                <div className={s.inc}>
+                    <div className={s.inc}>
 
-                    <Button callBack={onclickHandlerInc}
-                            name={'inc'}
-                            disable={a === 5}
-                    />
+                        <Button callBack={onclickHandlerInc}
+                                name={'inc'}
+                                disable={a === max}
+                        />
+                    </div>
+                    <div className={s.reset}>
+                        <Button callBack={onclickHandlerReset}
+                                name={'reset'}
+                                disable={a === min}
+                        />
+                    </div>
+
                 </div>
-                <div className={s.reset}>
-                    <Button callBack={onclickHandlerReset}
-                            name={'reset'}
-                            disable={a === 0}
-                    />
-                </div>
+            </div>
+            <div>
+                <Input callBack={setMax} value={max} name={'max value: '} error={error}/>
+                <Input callBack={setStart} value={min} name={'start value: '}/>
+                <Button callBack={setSettingCounter} name={'set'} disable={min >= max}/>
             </div>
         </div>
     );
 };
+
 
 export default Counter;

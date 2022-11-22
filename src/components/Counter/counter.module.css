@@ -1,7 +1,13 @@
+.all {
+
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    Justify-content: space-around;
+}
+
 .counter {
-    position: relative;
-    top: 50px;
-    left: 100px;
+
     border: 3px solid #6DE5FA;
     background-color: #292C34;
     border-radius: 7px;
@@ -37,7 +43,7 @@
 }
 
 .buttonsArea {
-
+    display: flex;
     border: 3px solid #6DE5FA;
     background-color: #292C34;
     border-radius: 7px;
@@ -49,24 +55,50 @@
 }
 
 .buttons {
-    
+
     border: 2px solid #6DE5FA;
     border-radius: 7px;
     background-color: #6DE5FA;
     font-size: 23px;
     font-weight: bold;
+
+}
+
+.buttons:active {
+
+    border: 2px solid #6DE5FA;
+    border-radius: 7px;
+    background-color: #6DE5FA;
+    font-size: 23px;
+    font-weight: bold;
+    opacity: 80%;
 }
 
 .inc {
-    width: px;
-    position: fixed;
-    top: 192px;
-    left: 130px
+    position: relative;
+    left: 30px;
+    top: 15px
 }
 
 .reset {
+    position: relative;
+    left: 80px;
+    top: 15px
+}
 
-    position: fixed;
-    top: 192px;
-    left: 230px
+.input {
+    width: 80px;
+    border: 2px solid #6DE5FA;
+    border-radius: 7px;
+    text-align: center;
+    margin: 10px;
+}
+
+.text {
+    color: #6DE5FA;
+
+}
+
+.error {
+    border: red 1px solid;
 }

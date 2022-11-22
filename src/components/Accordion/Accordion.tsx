@@ -15,7 +15,7 @@ function Accordion(props: AccordionPropsType) {
         <AccordionTittle title={props.titleValue}
                          arr={props.arr}
                          onChange={props.onChange}/>
-        {!props.collapsed && <AccordionBody/>}
+        {/*{!props.collapsed && <AccordionBody/>}*/}
     </div>
 }
 
