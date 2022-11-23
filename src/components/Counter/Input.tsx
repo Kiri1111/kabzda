@@ -1,7 +1,5 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import s from './counter.module.css'
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 type InputPropsType = {
     error?: boolean
@@ -17,12 +15,12 @@ const Input = (props: InputPropsType) => {
         let num = e.currentTarget.value
         props.callBack(Number(num))
     }
-    
+
     return (
         <div>
             <div className={s.text}>{props.name}</div>
             <input className={props.error ? s.error : s.input} onChange={onChangeHandler} value={props.value}
-                   type={"number"} min={0}
+                   type={"number"}
                    autoFocus/>
 
         </div>
