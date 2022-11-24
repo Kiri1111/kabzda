@@ -1,0 +1,115 @@
+.allCounter {
+
+    display: flex;
+    flex-direction: column;
+    border: 3px solid orange;
+    border-radius: 5px;
+    width: 400px;
+    height: 230px;
+}
+
+.value {
+    margin: 10px;
+    font-size: 80px;
+    color: orange;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 115px;
+}
+
+.valueMax {
+    margin: 10px;
+    font-size: 80px;
+    color: #fc0a0a;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 115px;
+}
+
+.inputs {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    left: 500px;
+    width: 360px;
+    height: 200px;
+    border: 3px solid orange;
+    border-radius: 5px;
+}
+
+.errorInput {
+    color: orange;
+    border: 3px solid rgba(255, 0, 0, 0.43);
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    background-color: #8a5555;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 130px;
+    padding-left: 15px;
+}
+
+.maxInput {
+    color: orange;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    background-color: #292C34;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 130px;
+    padding-left: 15px;
+
+}
+
+.minInput {
+    color: orange;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    background-color: #292C34;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 130px;
+    padding-left: 15px;
+}
+
+.errorText {
+    margin: 10px;
+    font-size: 50px;
+    color: #fc0a0a;
+    height: 115px;
+}
+
+.title {
+    color: orange;
+    font-size: 20px;
+    /*position: relative;*/
+    /*top: 28px;*/
+    /*left: -105px*/
+}
+
+.buttonsValue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    row-gap: 30px;
+    margin: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 90px;
+    width: 370px;
+}
+
+.buttonSet {
+    margin: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    height: 90px;
+}
