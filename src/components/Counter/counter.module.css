@@ -110,7 +110,7 @@
     position: relative;
     top: -25px;
     left: 30px;
-    border: rgba(255, 0, 0, 0.51) 3px solid;
+    border: rgba(255, 0, 0, 0.51) 2px solid;
     width: 85px;
     border-radius: 5px;
     text-align: center;
@@ -126,7 +126,7 @@
     top: 20px;
     color: red;
     font-size: 25px;
-   
+
 }
 
 .settings {

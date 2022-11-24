@@ -9,6 +9,7 @@ import {UncontrolledOnOff} from './UnControledOnOff/UncontrolledOnOff';
 import Counter from "./components/Counter/counter";
 import Input from "./input/input";
 import ControledInput from "./input/controledInput";
+import {NewCounter} from "./newCounter/NewCounter";
 
 function App() {
     console.log("App rendered")
@@ -20,10 +21,10 @@ function App() {
     return (
         <div className={'App'}>
 
-
+            <NewCounter/>
             {/*<Input/>*/}
             {/*<ControledInput/>*/}
-            <Counter/>
+            {/*<Counter/>*/}
             {/*<Accordion titleValue={'Menu'}*/}
             {/*           arr={['Kir9', 'Dima', 'Kost9n', 'Banan']}*/}
             {/*           collapsed={accordionCollapsed}*/}
