@@ -14,8 +14,8 @@ export const NewCounter = () => {
     }
     const resetOnclickHandler = () => setValue(min)
     const setOnclickHandler = () => setValue(min)
-    const onChangeMinHandler = (min: number) => {
-        setMin(min)
+    const onChangeMinHandler = (minValue: number) => {
+        setMin(minValue)
         max <= min ? setError(true) : setError(false)
     }
     const onChangeMaxHandler = (max: number) => {
@@ -28,7 +28,8 @@ export const NewCounter = () => {
                 {error ? <div className={s.errorText}>'incorrect data'</div> : value}
             </div>
             <div className={s.buttonsValue}>
-                <SuperButton disabled={value === max || error} callBack={incOnclickHandler} title={"inc"}/>
+                <SuperButton disabled={value === max || error || min < 0 || max < 0} callBack={incOnclickHandler}
+                             title={"inc"}/>
                 <SuperButton disabled={value < max || error} callBack={resetOnclickHandler} title={'reset'}/>
                 <InputBlock
                     setOnclickHandler={setOnclickHandler}

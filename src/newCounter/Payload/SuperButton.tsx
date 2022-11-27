@@ -1,4 +1,5 @@
 import React from 'react';
+import s from '../newCounter.module.css'
 
 type SuperButtonType = {
     callBack: () => void
@@ -11,7 +12,7 @@ const SuperButton = (props: SuperButtonType) => {
 
     return (
         <div>
-            <button disabled={props.disabled} onClick={onClickHandler}>{props.title}</button>
+            <button className={s.button} disabled={props.disabled} onClick={onClickHandler}>{props.title}</button>
         </div>
     );
 };

@@ -6,8 +6,8 @@ type InputBlockType = {
     min: number
     max: number
     disabled: boolean
-    onChangeMinHandler: (min: number) => void
-    onChangeMaxHandler: (max: number) => void
+    onChangeMinHandler: (minValue: number) => void
+    onChangeMaxHandler: (maxValue: number) => void
     setOnclickHandler: () => void
     error: boolean
 }
@@ -34,7 +34,8 @@ const InputBlock = (props: InputBlockType) => {
                    onChange={onChangeMinHandler}
             />
             <div className={s.buttonSet}>
-                <SuperButton disabled={props.disabled} callBack={props.setOnclickHandler} title={'set'}/>
+                <SuperButton disabled={props.disabled || props.min < 0 || props.max < 0}
+                             callBack={props.setOnclickHandler} title={'set'}/>
             </div>
         </div>
     );

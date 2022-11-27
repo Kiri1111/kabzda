@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, MouseEvent} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
@@ -10,18 +10,33 @@ import Counter from "./components/Counter/counter";
 import Input from "./input/input";
 import ControledInput from "./input/controledInput";
 import {NewCounter} from "./newCounter/NewCounter";
+import Select from "./components/Select";
 
+// import MouseEvent from './re'
 function App() {
     console.log("App rendered")
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     const [switchOn, setSwitchOn] = useState<boolean>(false)
+    const [value, setValue] = useState('1')
+    const [counter, setCounter] = useState(false)
+    const onClickCounterHandler = () => {
 
+        setCounter(!counter)
+    }
     return (
         <div className={'App'}>
-
-            <NewCounter/>
+            {/*{<button onClick={onClickCounterHandler}>set</button>}*/}
+            {/*{counter ? <Counter/> :*/}
+            {/*    <NewCounter/>}*/}
+            {/*<Select value={value} onChange={(newValue: string) => {*/}
+            {/*    setValue(newValue)*/}
+            {/*}} items={[*/}
+            {/*    {value: '1', title: 'Minsk'},*/}
+            {/*    {value: '2', title: 'Kiev'},*/}
+            {/*    {value: '3', title: 'Moscow'}*/}
+            {/*]}/>*/}
             {/*<Input/>*/}
             {/*<ControledInput/>*/}
             {/*<Counter/>*/}
@@ -33,7 +48,7 @@ function App() {
             {/*           }}/>*/}
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
-            {/*<UnControlledAccordion titleValue={'Menu'}/>*/}
+            <UnControlledAccordion titleValue={'Menu'}/>
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}

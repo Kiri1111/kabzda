@@ -113,3 +113,49 @@
     border-radius: 5px;
     height: 90px;
 }
+
+.button {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: #292C34;
+    color: orange;
+    font-size: 20px;
+}
+
+.button:hover {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: #292C34;
+    color: orange;
+    font-size: 22px;
+    opacity: 80%;
+}
+
+.button:active {
+    width: 65px;
+    height: 28px;
+    margin-top: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: #292C34;
+    color: orange;
+    font-size: 20px;
+}
+
+.button:disabled {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: #292C34;
+    color: orange;
+    font-size: 22px;
+    opacity: 20%;
+}

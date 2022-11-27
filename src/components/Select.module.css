@@ -1,0 +1,20 @@
+.select .main {
+    color: wheat;
+    border: 1px solid wheat;
+    display: inline-block;
+    max-width: 50px;
+    max-height: 70px;
+}
+
+.items {
+    color: wheat;
+    border: 1px solid #fcac18;
+    position: absolute;
+    padding: 5px;
+}
+
+.item.select {
+    background-color: #8a5555;
+    color: wheat;
+
+}
