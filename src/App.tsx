@@ -11,8 +11,8 @@ import Input from "./input/input";
 import ControledInput from "./input/controledInput";
 import {NewCounter} from "./newCounter/NewCounter";
 import Select from "./components/Select";
+import {Example1} from "./ReactMemo";
 
-// import MouseEvent from './re'
 function App() {
     console.log("App rendered")
 
@@ -27,6 +27,7 @@ function App() {
     }
     return (
         <div className={'App'}>
+            <Example1/>
             {/*{<button onClick={onClickCounterHandler}>set</button>}*/}
             {/*{counter ? <Counter/> :*/}
             {/*    <NewCounter/>}*/}
@@ -48,7 +49,7 @@ function App() {
             {/*           }}/>*/}
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
-            <UnControlledAccordion titleValue={'Menu'}/>
+            {/*<UnControlledAccordion titleValue={'Menu'}/>*/}
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
