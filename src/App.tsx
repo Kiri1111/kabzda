@@ -25,12 +25,14 @@ function App() {
 
         setCounter(!counter)
     }
+
+
     return (
         <div className={'App'}>
-            <Example1/>
+            {/*<Example1/>*/}
             {/*{<button onClick={onClickCounterHandler}>set</button>}*/}
             {/*{counter ? <Counter/> :*/}
-            {/*    <NewCounter/>}*/}
+            <NewCounter/>
             {/*<Select value={value} onChange={(newValue: string) => {*/}
             {/*    setValue(newValue)*/}
             {/*}} items={[*/}
