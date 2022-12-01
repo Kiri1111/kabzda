@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import s from './Select.module.css'
 
 type ItemType = {
-    title: string
-    value: any
+    id: number
+    country: { id: number, title: string }
+    city: string
+    people: number
 }
 
 type SelectType = {
@@ -16,28 +18,34 @@ type SelectType = {
 const Select = (props: SelectType) => {
 
     const [active, setActive] = useState(false)
-    const [hoveredValue, setHoveredValue] = useState()
+    const [hoveredValue, setHoveredValue] = useState(1)
     const onClickHandler = () => setActive(!active)
 
 
-    const selectItem = props.items.find(i => i.value === props.value)
+    const selectItem = props.items.find(i => i.id === props.value)
 
     return (
         <div className={s.select}>
-            <span className={s.main} onClick={onClickHandler}>{selectItem && selectItem.title}</span>
+            {/*<span className={s.main} onClick={onClickHandler}>{"ddd"}</span>*/}
+            <span className={s.main} onClick={onClickHandler}>{selectItem && selectItem.city}</span>
             {active &&
                 <div className={s.items}>
                     {props.items.map(i => <div
-                        className={s.item + ' ' + (hoveredValue === i.value ? s.select : ' ')}
-                        key={i.value}
-                        onMouseEnter={() => {
-                            setHoveredValue(i.value)
-                        }}
-                        onClick={() => {
-                            props.onChange(i.value);
-                            onClickHandler();
-                        }}
-                    >{i.title}</div>)}
+                            className={s.item + ' ' + (hoveredValue === i.id ? s.select : ' ')}
+                            key={i.id}
+                            onMouseEnter={() => {
+                                setHoveredValue(i.id)
+                            }}
+                            onClick={() => {
+                                props.onChange(i.id);
+                                onClickHandler();
+                            }}
+                        >
+                            {i.country.title}
+                            <span>{i.city}</span>
+                            <span>{i.people}</span>
+                        </div>
+                    )}
                 </div>}
         </div>
     );
