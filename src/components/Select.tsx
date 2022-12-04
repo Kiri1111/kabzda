@@ -9,20 +9,20 @@ type ItemType = {
 }
 
 type SelectType = {
-    value: any
+
     onChange: any
     items: ItemType[]
 }
 
 
 const Select = (props: SelectType) => {
-
+    const [value, setValue] = useState(1)
     const [active, setActive] = useState(false)
     const [hoveredValue, setHoveredValue] = useState(1)
     const onClickHandler = () => setActive(!active)
 
 
-    const selectItem = props.items.find(i => i.id === props.value)
+    const selectItem = props.items.find(i => i.id === value)
 
     return (
         <div className={s.select}>
@@ -37,7 +37,7 @@ const Select = (props: SelectType) => {
                                 setHoveredValue(i.id)
                             }}
                             onClick={() => {
-                                props.onChange(i.id);
+                                setValue(i.id);
                                 onClickHandler();
                             }}
                         >
@@ -50,5 +50,5 @@ const Select = (props: SelectType) => {
         </div>
     );
 };
-
+export const MemoSelect = React.memo(Select)
 export default Select;
