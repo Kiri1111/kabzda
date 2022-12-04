@@ -12,7 +12,7 @@ import ControledInput from "./input/controledInput";
 import {NewCounter} from "./newCounter/NewCounter";
 import Select from "./components/Select";
 import {Example1} from "./ReactMemo";
-import {Example2} from "./stories/UseMemo.stories";
+import {Example2} from "./stories/UseMemoUseCallback.stories";
 import {HomeworkWithUseMemo} from "./Homeworks/homeworkUseMemo";
 
 function App() {
