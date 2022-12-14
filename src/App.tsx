@@ -18,7 +18,7 @@ function App() {
     }
     return (
         <div className={'App'}>
-            {<button onClick={onClickCounterHandler}>set</button>}
+            <button onClick={onClickCounterHandler}>set</button>
             {vision ? <Counter/> :
                 <NewCounter/>}
         </div>
