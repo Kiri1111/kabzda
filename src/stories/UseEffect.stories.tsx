@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import counter from "../components/Counter/counter";
 
 export default {
     title: 'useEffect demo'
@@ -29,6 +30,59 @@ export const Example2 = () => {
 
         {/*Hello, {countter}*/}
         {/*<button onClick={() => setCountter(c => c + 111)}>+</button>*/}
+    </>
+
+}
+
+
+export const SetTimeOutExample = () => {
+    console.log("Example2")
+
+    let [counter, setCounter] = useState<number>(1)
+    //  let [countter, setCountter] = useState<number>(1)
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         console.log('useEffect ')
+    //         document.title = counter.toString()
+    //     }, 1000)
+    // }, [counter])
+    useEffect(() => {
+        setInterval(() => {
+            setCounter(c => c + 1)
+        }, 1000)
+    }, [])
+
+
+    return <>
+        Hello, {counter}
+        <button onClick={() => setCounter(c => c + 1)}>+</button>
+
+        {/*Hello, {countter}*/}
+        {/*<button onClick={() => setCountter(c => c + 111)}>+</button>*/}
+    </>
+
+}
+
+
+export const Clock = () => {
+
+    let date = new Date()
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+    let seconds = date.getSeconds()
+    let [clock, setClock] = useState(date)
+
+    useEffect(() => {
+        setInterval(() => {
+            setClock(date)
+        }, 1000)
+    })
+
+
+    return <>
+
+        {`${hours} часоу : ${minutes} хвилинка : ${seconds} сякундачак`}
+
     </>
 
 }

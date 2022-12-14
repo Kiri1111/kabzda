@@ -5,6 +5,7 @@ import {NewCounter} from "./newCounter/NewCounter";
 import {useDispatch, useSelector} from "react-redux";
 import {rootReducerType} from "./store";
 import {changeConditionAC, VisionStateType} from "./counters-reducer/SetVisionReducer";
+import {Clock} from "./stories/UseEffect.stories";
 
 function App() {
     // const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
@@ -21,7 +22,9 @@ function App() {
             <button onClick={onClickCounterHandler}>set</button>
             {vision ? <Counter/> :
                 <NewCounter/>}
+            <Clock/>
         </div>
+
     );
 }
 
