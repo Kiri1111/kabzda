@@ -64,25 +64,3 @@ export const SetTimeOutExample = () => {
 }
 
 
-export const Clock = () => {
-
-    let date = new Date()
-    let hours = date.getHours()
-    let minutes = date.getMinutes()
-    let seconds = date.getSeconds()
-    let [clock, setClock] = useState(date)
-
-    useEffect(() => {
-        setInterval(() => {
-            setClock(date)
-        }, 1000)
-    })
-
-
-    return <>
-
-        {`${hours} часоу : ${minutes} хвилинка : ${seconds} сякундачак`}
-
-    </>
-
-}
