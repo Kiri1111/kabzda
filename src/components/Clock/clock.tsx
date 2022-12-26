@@ -5,7 +5,7 @@ import {Analog} from "./view/Analog";
 export const Clock = () => {
 
     const [clock, setClock] = useState(new Date())
-
+    const [view, setView] = useState(true)
     useEffect(() => {
         const effect = setInterval(() => {
             setClock(new Date())
@@ -14,9 +14,13 @@ export const Clock = () => {
     }, [])
 
     return <>
-
-        <Digital clock={clock}/>
-        <Analog clock={clock}/>
+        <button onClick={() => {
+            setView(!view)
+        }}>set clock
+        </button>
+        {view ? <Digital clock={clock}/> : <Analog clock={clock}/>}
+        {/*<Digital clock={clock}/>*/}
+        {/*<Analog clock={clock}/>*/}
     </>
 
 }

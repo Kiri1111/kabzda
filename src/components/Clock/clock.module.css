@@ -1,4 +1,5 @@
 .clock {
+    margin-left: 568px;
     width: 120px;
     text-align: center;
     display: flex;
@@ -6,9 +7,6 @@
     align-items: center;
     border: solid 1px #ccc;
     border-radius: 5px;
-    margin: 5px;
-
-
 }
 
 .clock .digital-clock {
