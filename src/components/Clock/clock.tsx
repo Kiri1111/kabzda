@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Digital} from "./view/Digital";
+import {Analog} from "./view/Analog";
 
 export const Clock = () => {
 
@@ -15,7 +16,7 @@ export const Clock = () => {
     return <>
 
         <Digital clock={clock}/>
-
+        <Analog clock={clock}/>
     </>
 
 }
