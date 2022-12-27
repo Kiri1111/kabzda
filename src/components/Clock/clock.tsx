@@ -24,3 +24,26 @@ export const Clock = () => {
     </>
 
 }
+
+export const ResetUseEffectExample = () => {
+    const [counter, setCounter] = useState(0)
+    console.log('Component render')
+    useEffect(() => {
+        console.log('Set effect')
+        return () => {
+            console.log('Reset effect')
+        }
+    }, [])
+
+    const onClickHandler = () => {
+        setCounter((c) => c + 1)
+    }
+    return (
+        <>
+            Hello counter, {counter}
+            <button onClick={onClickHandler}>+</button>
+        </>
+    )
+}
+
+
